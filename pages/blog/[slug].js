@@ -13,19 +13,17 @@ export default function TestPage({ source }) {
     )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps({params: {slug}}) {
     // MDX text - can be from a local file, database, anywhere
-    const source = 'Some **mdx** text'
-    const posts =  await axios.get(`${process.env.HOST}/api/posts`)
-
-    const mdxSource = await serialize(source)
+    const data =  await axios.get(`${process.env.HOST}/api/posts/blog/${slug}`)
+    const [post] = data.data
+    const mdxSource = await serialize(post.source)
     return { props: { source: mdxSource } }
 }
 
-export async function getStaticPaths(context) {
+export async function getStaticPaths() {
    const posts =  await axios.get(`${process.env.HOST}/api/posts`)
-    const paths = posts.data.map(({ slug }) => slug)
-
+  const paths = posts.data.map(({ slug }) => slug)
     return {
         paths: [
             // String variant:

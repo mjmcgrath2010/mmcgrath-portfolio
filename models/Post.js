@@ -1,13 +1,15 @@
 import mongoose from 'mongoose'
 
 const Post = new mongoose.Schema({
-    body: {
-        type: String
-    },
     description: {
         type: String,
     },
     slug: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    source: {
         type: String,
         required: true
     },

@@ -5,7 +5,17 @@ export default async function handler(req, res) {
     const {query} = req
     await dbConnect()
 
-    const post = new Post({title: 'Hello World', slug: '/blog/hello-world', })
+    const source = `
+    
+    Some **mdx** text
+    
+    
+    with spaces
+    
+    
+    `
+
+    const post = new Post({title: 'Hello World', slug: '/blog/hello-world', source })
 
     await post.save()
 
