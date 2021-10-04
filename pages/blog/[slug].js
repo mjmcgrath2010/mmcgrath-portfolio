@@ -1,7 +1,6 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import axios from 'axios'
-import { useRouter } from 'next/router'
 import BlogPost from "../../layouts/BlogPost";
 
 
