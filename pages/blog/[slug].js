@@ -25,11 +25,7 @@ export async function getStaticPaths() {
    const posts =  await axios.get(`${process.env.HOST}/api/posts`)
   const paths = posts.data.map(({ slug }) => slug)
     return {
-        paths: [
-            // String variant:
-            '/blog/first-post',
-            ...paths
-        ],
+        paths,
         fallback: false,
     }
 }
