@@ -3,16 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  background: ${({ theme, color }) => theme.colors.purple_300};
   padding: ${({ theme: { padding } }) => `${padding.medium} ${padding.large}`};
-  color: ${({ theme }) => theme.colors.white_100};
-  ${({ theme, $size }) => theme.fontStyles.buttons[$size]}
-  outline: none;
-  border: none;
   border-radius: 5px;
   line-height: 1.5;
   min-width: 110px;
   cursor: pointer;
+  ${({ theme, $size }) => theme.fontStyles.buttons[$size]}
+  ${({ theme, $color, $variant }) => theme.colors.buttons[$variant][$color]}
 `;
 
 const Button = ({ onClick, color, size, text, variant, ...rest }) => (
@@ -32,7 +29,7 @@ Button.defaultProps = {
   onClick: () => {},
   text: "Click me",
   size: "medium",
-  variant: "outlined",
+  variant: "contained",
 };
 
 Button.propTypes = {

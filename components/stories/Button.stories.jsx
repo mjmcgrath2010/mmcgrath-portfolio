@@ -14,6 +14,6 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   text: "Button",
-  variant: "outlined",
+  variant: "contained",
   color: "primary",
 };
