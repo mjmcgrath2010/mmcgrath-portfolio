@@ -13,7 +13,15 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-  text: "Button",
+  text: "Primary Button",
   variant: "contained",
   color: "primary",
+};
+
+export const Secondary = Template.bind({});
+
+Secondary.args = {
+  text: "Secondary Button",
+  variant: "contained",
+  color: "secondary",
 };
