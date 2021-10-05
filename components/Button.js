@@ -14,6 +14,7 @@ const Button = ({ text, color, onClick, variant }) => (
 
 Button.propTypes = {
   onClick: PropTypes.func,
+  colors: PropTypes.oneOf(["blue_100"]),
 };
 
 export default Button;
