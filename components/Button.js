@@ -4,24 +4,25 @@ import styled from "styled-components";
 
 const StyledButton = styled.button`
   background: ${({ theme, color }) => theme.colors.purple_300};
-  padding: ${({
-    theme: {
-      spacing: { padding },
-    },
-  }) => `${padding.medium} ${padding.large}`};
+  padding: ${({ theme: { padding } }) => `${padding.medium} ${padding.large}`};
   color: ${({ theme }) => theme.colors.white_100};
+  ${({ theme, $size }) => theme.fontStyles.buttons[$size]}
   outline: none;
   border: none;
   border-radius: 5px;
-  font-size: ${({ theme }) => theme.typography.fontSizes.medium};
   line-height: 1.5;
-  font-family: ${({ theme }) => theme.typography.fontFamilies.sans_2};
   min-width: 110px;
   cursor: pointer;
 `;
 
-const Button = ({ onClick, text, color, variant, ...rest }) => (
-  <StyledButton $color={color} onClick={onClick} $variant={variant} {...rest}>
+const Button = ({ onClick, color, size, text, variant, ...rest }) => (
+  <StyledButton
+    $color={color}
+    onClick={onClick}
+    $size={size}
+    $variant={variant}
+    {...rest}
+  >
     {text}
   </StyledButton>
 );
@@ -30,6 +31,7 @@ Button.defaultProps = {
   color: "primary",
   onClick: () => {},
   text: "Click me",
+  size: "medium",
   variant: "outlined",
 };
 
@@ -43,6 +45,7 @@ Button.propTypes = {
     "info",
     "warning",
   ]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   variant: PropTypes.oneOf(["outlined", "contained"]),
 };
 

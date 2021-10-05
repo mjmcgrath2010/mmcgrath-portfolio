@@ -1,3 +1,5 @@
+import { css } from "styled-components";
+
 const fontSizes = {
   xSmall: "6px",
   small: "12px",
@@ -18,10 +20,41 @@ const fontWeights = {
   bold: 700,
 };
 
+const fontStyles = {
+  buttons: {
+    small: css`
+      font-family: ${fontFamilies.sans_2};
+      font-weight: ${fontWeights.default};
+      font-size: ${fontSizes.small};
+    `,
+    medium: css`
+      font-family: ${fontFamilies.sans_2};
+      font-weight: ${fontWeights.default};
+      font-size: ${fontSizes.medium};
+    `,
+    large: css`
+      font-family: ${fontFamilies.sans_2};
+      font-weight: ${fontWeights.default};
+      font-size: ${fontSizes.large};
+    `,
+  },
+  paragraph: css`
+    font-family: ${fontFamilies.sans_2};
+    font-weight: ${fontWeights.default};
+    font-size: ${fontSizes.medium};
+  `,
+  heading: css`
+    font-family: ${fontFamilies.sans_1};
+    font-weight: ${fontWeights.default};
+    font-size: ${fontSizes.large};
+  `,
+};
+
 const typography = {
   fontSizes,
   fontFamilies,
   fontWeights,
+  fontStyles,
 };
 
 export default typography;

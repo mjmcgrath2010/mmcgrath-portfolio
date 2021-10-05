@@ -4,8 +4,8 @@ import typography from "./typography";
 
 const theme = {
   colors,
-  spacing,
-  typography,
+  ...spacing,
+  ...typography,
 };
 
 export default theme;
