@@ -14,14 +14,16 @@ export default function NewPost() {
 
   return useMemo(
     () => (
-      <SimpleMDE
-        options={{
-          spellChecker: false,
-          sideBySideFullscreen: true,
-        }}
-        value={value}
-        onChange={handleChange}
-      />
+      <div>
+        <h1>New Post:</h1>
+        <SimpleMDE
+          options={{
+            sideBySideFullscreen: true,
+          }}
+          value={value}
+          onChange={handleChange}
+        />
+      </div>
     ),
     []
   );
