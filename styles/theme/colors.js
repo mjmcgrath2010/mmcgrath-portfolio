@@ -63,31 +63,54 @@ const pallet = {
         color: ${white.white_100};
         border: ${`2px solid ${purple.purple_300}`};
         background: ${purple.purple_300};
+        &:hover {
+          background: ${purple.purple_100};
+          border-color: ${purple.purple_100};
+        }
       `,
       secondary: css`
         color: ${white.white_100};
         border: ${`2px solid ${teal.teal_300}`};
         background: ${teal.teal_300};
+        &:hover {
+          background: ${teal.teal_100};
+          border-color: ${teal.teal_100};
+        }
       `,
       danger: css`
         color: ${white.white_100};
         border: ${`2px solid ${red.red_300}`};
         background: ${red.red_300};
+        &:hover {
+          background: ${red.red_100};
+          border-color: ${red.red_100};
+        }
       `,
       success: css`
         color: ${white.white_100};
         border: ${`2px solid ${green.green_300}`};
         background: ${green.green_300};
+        &:hover {
+          background: ${green.green_100};
+        }
       `,
       info: css`
         color: ${white.white_100};
         border: ${`2px solid ${blue.blue_300}`};
         background: ${blue.blue_300};
+        &:hover {
+          background: ${blue.blue_100};
+          border-color: ${blue.blue_100};
+        }
       `,
       warning: css`
         color: ${white.white_100};
         border: ${`2px solid ${yellow.yellow_300}`};
         background: ${yellow.yellow_300};
+        &:hover {
+          background: ${yellow.yellow_100};
+          border-color: ${yellow.yellow_100};
+        }
       `,
     },
     outlined: {
@@ -95,31 +118,55 @@ const pallet = {
         color: ${purple.purple_300};
         border: ${`2px solid ${purple.purple_300}`};
         background: ${white.white_100};
+        &:hover {
+          background: ${purple.purple_100};
+          color: ${white.white_100};
+        }
       `,
       secondary: css`
         color: ${teal.teal_300};
         border: ${`2px solid ${teal.teal_300}`};
         background: ${white.white_100};
+        &:hover {
+          background: ${teal.teal_100};
+          color: ${white.white_100};
+        }
       `,
       danger: css`
         color: ${red.red_300};
         border: ${`2px solid ${red.red_300}`};
         background: ${white.white_100};
+        &:hover {
+          background: ${red.red_100};
+          color: ${white.white_100};
+        }
       `,
       success: css`
         color: ${green.green_300};
         border: ${`2px solid ${green.green_300}`};
         background: ${white.white_100};
+        &:hover {
+          background: ${green.green_100};
+          color: ${white.white_100};
+        }
       `,
       info: css`
         color: ${blue.blue_300};
         border: ${`2px solid ${blue.blue_300}`};
         background: ${white.white_100};
+        &:hover {
+          background: ${blue.blue_100};
+          color: ${white.white_100};
+        }
       `,
       warning: css`
         color: ${yellow.yellow_300};
         border: ${`2px solid ${yellow.yellow_300}`};
         background: ${white.white_100};
+        &:hover {
+          background: ${yellow.yellow_100};
+          color: ${white.white_100};
+        }
       `,
     },
   },
