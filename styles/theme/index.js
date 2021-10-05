@@ -1,5 +1,7 @@
-export default {
-  colors: {
-    blue_100: "#6d84ff",
-  },
+import colors from "./colors";
+
+const theme = {
+  colors,
 };
+
+export default theme;
